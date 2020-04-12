@@ -68,7 +68,7 @@ validate=7067//50
 
 result=model.fit_generator(train_image_gen,epochs=100,steps_per_epoch=steps_for,validation_data=test_image_gen,verbose=1,validation_steps=validate)
 
-model.save('Trained_Model.h5')
+#model.save('Trained_Model.h5')
 
 
 

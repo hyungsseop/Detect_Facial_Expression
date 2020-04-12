@@ -14,7 +14,7 @@
 
     <div id="maintable">
     
-    <h2>Test</h2>
+    <h2>M4</h2>
     
     <hr>
 
@@ -25,7 +25,7 @@
             
             <div class="col-sm-7">
             
-            <form action = "/uploaded" method = "POST"
+            <form action = "/uploaded" method = "POST, GET"
             enctype = "multipart/form-data">
             <input type = "file" name = "file" class="form-control-file"/>
             <input type = "submit" class="btn btn-info" value="Upload Image"/>
@@ -47,11 +47,11 @@
     
     <br>
     
-    <h3>출처</h3>
+    <h3></h3>
     
     <br>
     
-    <p>model and dataset .</p>
+    <p>picture</p>
     
     </div>
 
@@ -88,12 +88,12 @@ $('form').submit(function(e){
             $.ajax({
             url: "/analyze",
             type: 'POST',
-            data: original_image,
+            data: face_location,
             cache: false,
             contentType: false,
             processData: false 
         }).done(function(res){
-            imgPlaceholder.innerHTML = '<img src="' + face_location + '">'
+            imgPlaceholder.innerHTML = '<img src="' + original_image + '">'
             userinfo.innerHTML = res
         })
             
